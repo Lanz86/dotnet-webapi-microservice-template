@@ -1,4 +1,4 @@
-# .Net-6-Microservice-Template
+# .Net-7-Microservice-Template
 
 
 To install run this command in powershell inside the folder:
