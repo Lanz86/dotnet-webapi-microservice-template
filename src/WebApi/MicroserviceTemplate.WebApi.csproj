@@ -19,6 +19,7 @@
 
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+		<PackageReference Include="LnzSoftware.Swashbuckle.GenericTypeResponseFilter" Version="1.0.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.1" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />

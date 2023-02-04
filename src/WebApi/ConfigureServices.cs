@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 //using Microsoft.OpenApi.Models;
 using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
+using MicroserviceTemplate.WebApi.Results;
+using LnzSoftware.Swashbuckle.GenericTypeResponseFilter;
 
 namespace MicroserviceTemplate.WebApi;
 
@@ -54,6 +56,7 @@ public static class ConfigureServices
 
         services.AddSwaggerGen(c =>
         {
+            c.OperationFilter<GenericTypeResponseFilter>(typeof(ApiResult<>));
             c.SwaggerDoc("v1", new OpenApiInfo { Title = configuration.GetValue<string>("Swagger:MicroserviceApiTitle"), Version = "v1" });
             c.AddSecurityDefinition("Bearer",
                 new OpenApiSecurityScheme
